@@ -94,13 +94,14 @@ The denoising network will be saved under the `experiments/DPT/<exp_name>` folde
 
 ```bibtex
 @article{sun2024diffposetalk,
-  title={DiffPoseTalk: Speech-driven stylistic 3d facial animation and head pose generation via diffusion models},
-  author={Sun, Zhiyao and Lv, Tian and Ye, Sheng and Lin, Matthieu and Sheng, Jenny and Wen, Yu-Hui and Yu, Minjing and Liu, Yong-jin},
+  title={DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generation via Diffusion Models},
+  author={Sun, Zhiyao and Lv, Tian and Ye, Sheng and Lin, Matthieu and Sheng, Jenny and Wen, Yu-Hui and Yu, Minjing and Liu, Yong-Jin},
+  doi={10.1145/3658221},
   journal={ACM Transactions on Graphics (TOG)},
   volume={43},
   number={4},
-  articleno = {46},
-  numpages = {9},
+  articleno={46},
+  numpages={9},
   year={2024},
   publisher={ACM New York, NY, USA}
 }
