@@ -8,38 +8,31 @@ read -p "Password (FLAME):" password
 username=$(urle $username)
 password=$(urle $password)
 
-mkdir -p ./data
+mkdir -p ./models/data
 
 echo -e "\nDownloading FLAME..."
-wget --no-check-certificate --http-user=$username --http-password=$password 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './data/FLAME2020.zip' 
+wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './models/data/FLAME2020.zip'  --no-check-certificate --continue
+# wget --no-check-certificate --http-user=$username --http-password=$password 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './models/data/FLAME2020.zip' 
 # Check if download was successful before unzipping
-if [ -f './data/FLAME2020.zip' ]; then
-    unzip ./data/FLAME2020.zip -d ./data/FLAME2020
+if [ -f './models/data/FLAME2020.zip' ]; then
+    unzip ./models/data/FLAME2020.zip -d ./models/data/FLAME2020
 else
     echo "FLAME2020 download failed."
 fi
 
 # Download FLAME_masks.zip
 echo -e "\nDownloading FLAME_masks..."
-wget --no-check-certificate --http-user=$username --http-password=$password 'https://files.is.tue.mpg.de/tbolkart/FLAME/FLAME_masks.zip' -O './data/FLAME_masks.zip'
+wget --no-check-certificate --http-user=$username --http-password=$password 'https://files.is.tue.mpg.de/tbolkart/FLAME/FLAME_masks.zip' -O './models/data/FLAME_masks.zip'
 # Check if download was successful before unzipping
-if [ -f './data/FLAME_masks.zip' ]; then
-    unzip ./data/FLAME_masks.zip -d ./data/FLAME_masks
-    mv ./data/FLAME_masks/FLAME_masks.pkl ./data
+if [ -f './models/data/FLAME_masks.zip' ]; then
+    unzip ./models/data/FLAME_masks.zip -d ./models/data/FLAME_masks
+    mv ./models/data/FLAME_masks/FLAME_masks.pkl ./models/data
 else
     echo "FLAME_masks download failed."
 fi
 
 # Download mediapipe_landmark_embedding.zip
 echo -e "\nDownloading mediapipe_landmark_embedding..."
-wget --no-check-certificate --http-user=$username --http-password=$password 'https://files.is.tue.mpg.de/tbolkart/FLAME/mediapipe_landmark_embedding.zip' -O './data/landmark_embedding.zip'
-# Check if download was successful before unzipping
-if [ -f './data/landmark_embedding.zip' ]; then
-    unzip ./data/landmark_embedding.zip -d ./data/landmark_embedding
-    mv ./data/landmark_embedding/mediapipe_landmark_embedding.npz ./data
-else
-    echo "mediapipe_landmark_embedding download failed."
-fi
-
+wget 'https://github.com/yfeng95/DECA/raw/master/data/landmark_embedding.npy' -O './models/data/landmark_embedding.npy'
 echo -e "\nAll downloads and extractions completed."
 
