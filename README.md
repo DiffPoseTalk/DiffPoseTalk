@@ -11,9 +11,9 @@ DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generati
 
 ## TODO
 
-- [ ] Release the TFHP dataset
+- [x] Release the TFHP dataset
   - [x] Release the processed lmdb dataset
-  - [ ] Release the raw dataset
+  - [x] Release the raw dataset
 - [x] Release the training and inference code
 - [x] Release the pretrained models
 - [ ] Release the data processing code
@@ -26,7 +26,8 @@ DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generati
   bash ./setup/fetch_data.sh
   bash ./install_conda.sh
   ```
-- (Optional) If you want to train with the `HDTF_TFHP`, please follow this [instruction](./datasets/HDTF_TFHP/README.txt) to download the processed dataset.
+- (Optional) If you want to train with the `HDTF_TFHP`, please follow this [instruction](./datasets/HDTF_TFHP/README.md) to download the processed dataset.
+
 
 ## Inference
 
