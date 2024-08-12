@@ -21,7 +21,7 @@ DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generati
 
 ## Setup
 
-- Download FLAME-related files following this [instruction](./models/data/README.md) and setup the enviornments.
+- Download FLAME-related files following this [instruction](./models/data/README.md) and setup the enviornments. You can easily do this by running the following commands:
   ```shell
   bash ./setup/fetch_data.sh
   bash ./install_conda.sh
