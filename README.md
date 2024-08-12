@@ -11,9 +11,9 @@ DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generati
 
 ## TODO
 
-- [ ] Release the TFHP dataset
+- [x] Release the TFHP dataset
   - [x] Release the processed lmdb dataset
-  - [ ] Release the raw dataset
+  - [x] Release the raw dataset
 - [x] Release the training and inference code
 - [x] Release the pretrained models
 - [ ] Release the data processing code
