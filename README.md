@@ -16,7 +16,7 @@ DiffPoseTalk: Speech-Driven Stylistic 3D Facial Animation and Head Pose Generati
   - [x] Release the raw dataset
 - [x] Release the training and inference code
 - [x] Release the pretrained models
-- [ ] Release the data processing code
+- [x] Release the data processing code
 
 
 ## Setup
@@ -92,7 +92,7 @@ The denoising network will be saved under the `experiments/DPT/<exp_name>` folde
 
 ## Preparing Your Dataset
 
-[TODO]
+Please see the [`scripts_for_dataset`](./scripts_for_dataset/) folder.
 
 ---
 
